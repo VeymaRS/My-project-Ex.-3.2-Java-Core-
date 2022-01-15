@@ -52,22 +52,23 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        String parentsPath = "C:/Users/weyma/Documents/Games/savegames/";
         GameProgress game1 = new GameProgress(100, 150, 10, 200.2);
         GameProgress game2 = new GameProgress(100, 200, 8, 150.2);
         GameProgress game3 = new GameProgress(100, 100, 5, 100.2);
-        saveGame("C:/Users/weyma/Documents/Games/savegames/save1.dat", game1);
-        saveGame("C:/Users/weyma/Documents/Games/savegames/save2.dat", game2);
-        saveGame("C:/Users/weyma/Documents/Games/savegames/save3.dat", game3);
+        saveGame(parentsPath + "save1.dat", game1);
+        saveGame( parentsPath + "save2.dat", game2);
+        saveGame(parentsPath + "save3.dat", game3);
         List<String> zipFilesName = Arrays.asList(
-                "C:/Users/weyma/Documents/Games/savegames/save1.dat",
-                "C:/Users/weyma/Documents/Games/savegames/save2.dat",
-                "C:/Users/weyma/Documents/Games/savegames/save3.dat"
+                parentsPath + "save1.dat",
+                parentsPath + "save2.dat",
+                parentsPath + "save3.dat"
         );
-        zipFiles("C:/Users/weyma/Documents/Games/savegames/zip.zip", zipFilesName);
+        zipFiles(parentsPath + "zip.zip", zipFilesName);
 
-        deleteSave("C:/Users/weyma/Documents/Games/savegames/save1.dat");
-        deleteSave("C:/Users/weyma/Documents/Games/savegames/save2.dat");
-        deleteSave("C:/Users/weyma/Documents/Games/savegames/save3.dat");
+        deleteSave(parentsPath + "save1.dat");
+        deleteSave(parentsPath + "save2.dat");
+        deleteSave(parentsPath + "save3.dat");
 
     }
 }
